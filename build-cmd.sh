@@ -43,55 +43,30 @@ cp -v "${SRC_DIR}/dictionaries.xml" "${DICT_DIR}/"
 # Second Life
 cp -v "${SRC_DIR}/sl.dic" "${DICT_DIR}/sl.dic"
 
-## For each dictionary:
-##   1) Put the package itself in the DICT_DIR 
-##      with the name <lang>_<variant>.<suffix> 
-##      where <suffix> is .oxt, .zip, or .dic
-##   2) Extract the license for the dictionary 
-##      into LICENSE_DIR with the name
-##      <lang>_<variant>-dictionary-license.txt
-function extract {
-    # e.g. "$SRC_DIR/en_US.oxt"
-    local file="$1"
-    # e.g. "en_US.oxt"
-    local base="$(basename "$1")"
-    # lang (e.g. "en_US") can be explicitly passed as second param,
-    # but if omitted, strip off directory and extension from filename.
-    # Within $file we expect to find $lang.dic and $lang.aff.
-    local lang="${2:-${base%.*}}"
-    # Even though region within $lang tends to be capitalized (e.g. en_US),
-    # the files in $DICT_DIR should have uniform lowercase names.
-    local lowlang="$(echo "$lang" | tr '[[:upper:]]' '[[:lower:]]')"
-    # also, we want dest files to uniformly use underscore, not hyphen
-    lowlang="${lowlang/-/_}"
-    # Optionally pass name of license file; if omitted, copy whatever we find
-    # that looks like README*.txt. We really expect README_$lang.txt, and in
-    # most cases that's what we should find. However, en-GB.zip contains
-    # en-GB.dic, en-GB.aff and README_en_GB.txt (note inconsistent
-    # underscore). Finess that by copying whatever README_*.txt we find there:
-    # we're going to make its name uniform anyway.
-    local licfile="${3:-README*.txt}"
+# English
+cp -v ${SRC_DIR}/en/*.{aff,dic} "${DICT_DIR}/"
+cp -v ${SRC_DIR}/en/*.txt ${LICENSE_DIR}
 
-    # extract from zipfile into directory named for language
-    mkdir -p "$lang"
-    # Note: we use Python to extract files from zip - can't rely on unzip on Windows
-    python -c "import zipfile; zipfile.ZipFile(r'$file').extractall(r'$lang')"
-    for ext in dic aff
-    do # within $lang directory, expect to find $lang.$ext
-       # lowercase language name when we copy
-       cp -v "$lang/$lang.$ext" "${DICT_DIR}/$lowlang.$ext"
-    done
-    cp -v "$lang"/$licfile "${LICENSE_DIR}/$lowlang-dictionary-license.txt"
-}
+# Spanish
+cp -v ${SRC_DIR}/es/*.{aff,dic} "${DICT_DIR}/"
+cp -v ${SRC_DIR}/es/*.txt ${LICENSE_DIR}
 
-# American English
-extract "$SRC_DIR/en_US.oxt"
+# German
+cp -v ${SRC_DIR}/de/*.{aff,dic} "${DICT_DIR}/"
+cp -v ${SRC_DIR}/de/*.txt ${LICENSE_DIR}
 
-# British English
-extract "$SRC_DIR/en-GB.zip"
-
-# Spanish Spanish
-extract "$SRC_DIR/es_ES.oxt"
+# French
+cp -v ${SRC_DIR}/fr/*.{aff,dic} "${DICT_DIR}/"
+cp -v ${SRC_DIR}/fr/*.txt ${LICENSE_DIR}
 
 # Brazilian Portugese
-extract "$SRC_DIR/Vero_pt_BR_V208AOC.oxt" "pt_BR" "README_en.TXT"
+cp -v ${SRC_DIR}/pt_br/*.{aff,dic} "${DICT_DIR}/"
+cp -v ${SRC_DIR}/pt_br/*.txt ${LICENSE_DIR}
+
+# Russian
+cp -v ${SRC_DIR}/ru/*.{aff,dic} "${DICT_DIR}/"
+cp -v ${SRC_DIR}/ru/*.txt ${LICENSE_DIR}
+
+# Ukrainian
+cp -v ${SRC_DIR}/uk/*.{aff,dic} "${DICT_DIR}/"
+cp -v ${SRC_DIR}/uk/*.txt ${LICENSE_DIR}

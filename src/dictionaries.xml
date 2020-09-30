@@ -2,6 +2,22 @@
 <llsd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="llsd.xsd">
   <array>
     <map>
+    <map>
+      <key>name</key>
+      <string>en_au</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>English (Australia)</string>
+    </map>
+      <key>name</key>
+      <string>en_ca</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>English (Canada)</string>
+    </map>
+    <map>
       <key>name</key>
       <string>en_gb</string>
       <key>is_primary</key>
@@ -19,6 +35,30 @@
     </map>
     <map>
       <key>name</key>
+      <string>en_za</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>English (South Africa)</string>
+    </map>
+    <map>
+      <key>name</key>
+      <string>fr</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>Français</string>
+    </map>
+    <map>
+      <key>name</key>
+      <string>de_de</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>Deutsch (Deutschland)</string>
+    </map>
+    <map>
+      <key>name</key>
       <string>es_es</string>
       <key>is_primary</key>
       <boolean>1</boolean>
@@ -27,11 +67,59 @@
     </map>
     <map>
       <key>name</key>
+      <string>es</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>Español (International)</string>
+    </map>
+    <map>
+      <key>name</key>
+      <string>es_es</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>Español (España)</string>
+    </map>
+    <map>
+      <key>name</key>
+      <string>es_mx</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>Español (México)</string>
+    </map>
+    <map>
+      <key>name</key>
+      <string>es_us</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>Español (United States)</string>
+    </map>
+    <map>
+      <key>name</key>
       <string>pt_br</string>
       <key>is_primary</key>
       <boolean>1</boolean>
       <key>language</key>
       <string>Português (Brasil)</string>
+    </map>
+    <map>
+      <key>name</key>
+      <string>ru_ru</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>Pусский (Россия)</string>
+    </map>
+    <map>
+      <key>name</key>
+      <string>uk_UA</string>
+      <key>is_primary</key>
+      <boolean>1</boolean>
+      <key>language</key>
+      <string>Українська (Україна)</string>
     </map>
     <map>
       <key>name</key>
