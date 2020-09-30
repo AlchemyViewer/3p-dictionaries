@@ -2,7 +2,6 @@
 <llsd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="llsd.xsd">
   <array>
     <map>
-    <map>
       <key>name</key>
       <string>en_au</string>
       <key>is_primary</key>
@@ -10,6 +9,7 @@
       <key>language</key>
       <string>English (Australia)</string>
     </map>
+    <map>
       <key>name</key>
       <string>en_ca</string>
       <key>is_primary</key>
@@ -56,14 +56,6 @@
       <boolean>1</boolean>
       <key>language</key>
       <string>Deutsch (Deutschland)</string>
-    </map>
-    <map>
-      <key>name</key>
-      <string>es_es</string>
-      <key>is_primary</key>
-      <boolean>1</boolean>
-      <key>language</key>
-      <string>Español (España)</string>
     </map>
     <map>
       <key>name</key>
@@ -115,7 +107,7 @@
     </map>
     <map>
       <key>name</key>
-      <string>uk_UA</string>
+      <string>uk_ua</string>
       <key>is_primary</key>
       <boolean>1</boolean>
       <key>language</key>
