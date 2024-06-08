@@ -4,11 +4,11 @@
     <key>package_description</key>
     <map>
       <key>canonical_repo</key>
-      <string>https://git.alchemyviewer.org/alchemy/thirdparty/3p-dictionaries</string>
+      <string>https://github.com/AlchemyViewer/3p-dictionaries</string>
       <key>copyright</key>
-      <string>Copyright 2014 Apache OpenOffice software</string>
+      <string>various contributors</string>
       <key>description</key>
-      <string>Spell checking dictionaries to bundled into the viewer</string>
+      <string>Spell checking dictionaries to bundle into the viewer</string>
       <key>license</key>
       <string>various open source</string>
       <key>license_file</key>
